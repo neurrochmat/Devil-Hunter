@@ -1,50 +1,87 @@
-# Devil-Hunter
+# 🎮 Devil-Hunter
 
-## Instalasi Project
+Game action platformer 2D/3D sederhana — dibuat dengan Unity 6 + URP  
+Project Tugas Akhir Kelompok — Teknik Informatika POLINES
 
-Langkah-langkah untuk menjalankan project Devil-Hunter di komputer Anda:
+---
 
-### 1. Persyaratan Sistem
-- **Unity Hub**: Disarankan versi terbaru.
-- **Unity Editor**: Versi yang sesuai dengan project (cek file `ProjectSettings/ProjectVersion.txt` untuk versi yang digunakan).
-- **Git** (opsional, untuk clone repo).
+## 📌 Project Info
 
-### 2. Clone Repository
-Clone repo ini ke komputer lokal Anda dengan perintah:
+- **Project Name**: Devil-Hunter  
+- **Unity Version**: 6000.0.40f1 (Unity 6.0.40f1)  
+- **Render Pipeline**: Universal Render Pipeline (URP)  
+- **Repository**: [https://github.com/neurrochmat/Devil-Hunter](https://github.com/neurrochmat/Devil-Hunter)  
+- **License**: MIT
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+
+- [Unity Hub](https://unity.com/download)
+- Unity Editor 6000.0.40f1  
+  _(install via Unity Hub → Install Editor → version 6.0.40f1)_
+- [Git](https://git-scm.com/downloads)
+- (Optional) Visual Studio / Rider for C# editing
+
+---
+
+### How to Clone Project
+
 ```bash
 git clone https://github.com/neurrochmat/Devil-Hunter.git
+cd Devil-Hunter
 ```
 
-### 3. Buka Project di Unity
-1. Buka Unity Hub.
-2. Pilih **Add**, lalu arahkan ke folder hasil clone repo Devil-Hunter.
-3. Pilih versi Unity yang sesuai jika diminta.
-4. Tunggu hingga Unity selesai memuat dan mengimpor semua asset.
+---
 
-### 4. Install Dependencies (Jika Ada)
-- Jika ada package tambahan, Unity akan otomatis meng-install melalui Package Manager.
-- Pastikan terhubung ke internet saat pertama kali membuka project.
+### Open in Unity
 
-### 5. Jalankan Project
-- Klik tombol **Play** di Unity Editor untuk menjalankan project.
-
-### 6. Troubleshooting
-- Jika ada error terkait versi Unity, install Unity versi yang diminta oleh project.
-- Jika ada asset yang hilang, pastikan proses import asset di Unity selesai tanpa error.
-- Untuk masalah lain, cek konsol Unity atau hubungi maintainer repo.
+1. Open Unity Hub  
+2. Click **Open Project**  
+3. Select folder `Devil-Hunter`  
+4. Let Unity import and build Library (first time may take a while)
 
 ---
 
-## Struktur Direktori Utama
-- `Assets/` : Berisi seluruh asset project (script, prefab, scene, dll).
-- `Packages/` : Berisi dependencies Unity package.
-- `ProjectSettings/` : Pengaturan project Unity.
-- `UserSettings/` : Pengaturan user lokal.
+### Running the Game
+
+- Open Scene: `Assets/Scenes/Main.unity`  
+- Click ▶️ (Play button) to start the game
 
 ---
 
-## Kontribusi
-Silakan fork repo ini jika ingin melakukan pengembangan atau perbaikan.
+## 👫 Team Collaboration Guide
 
-## Lisensi
-Belum ada lisensi di repo ini. Hubungi pemilik repo untuk informasi lebih lanjut.
+- Main branch → `main` (stable)  
+- Development branch → `dev` (feature development)  
+- Personal feature branch:
+
+```bash
+git checkout -b feature-yourname
+```
+
+- Pull latest changes:
+
+```bash
+git pull origin main
+```
+
+---
+
+## ⚠️ Notes
+
+- Folders like `Library/`, `Temp/`, `Logs/` are ignored by Git (see `.gitignore`)
+- Unity Packages auto-resolved via `Packages/manifest.json`
+- If you encounter missing packages, ensure Unity Editor is online to auto-download dependencies
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+---
+
+Enjoy the game & happy coding! 🎮🚀
