@@ -1,7 +1,7 @@
 # 🎮 Devil-Hunter
 
 Game action platformer 2D/3D sederhana — dibuat dengan Unity 6 + URP  
-Project Tugas Akhir Kelompok — Teknik Informatika POLINES
+Project Tugas Besar Pemrograman Game — Teknik Informatika POLINES
 
 ---
 
