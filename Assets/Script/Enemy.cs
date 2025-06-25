@@ -83,7 +83,7 @@ public class Enemy : MonoBehaviour
         if (healthBar != null)
             healthBar.SetHealth(currentHealth, maxHealth);
 
-        StartCoroutine(Shake(0.1f, 0.05f));
+        StartCoroutine(Shake(0.4f, 0.08f));
 
         if (currentHealth <= 0)
         {
