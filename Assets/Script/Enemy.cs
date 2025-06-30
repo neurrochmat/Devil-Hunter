@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     private int currentHealth;
     private EnemyHealthBar healthBar;
     private Transform player;
+    private PlayerHealth playerHealth;
     private Animator anim;
     private Rigidbody2D rb;
     private bool isDead = false;
@@ -22,7 +23,10 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        player = playerObj.transform;
+        playerHealth = playerObj.GetComponent<PlayerHealth>();
+
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -34,7 +38,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (isDead) return;
+        if (isDead || playerHealth == null || playerHealth.IsDead()) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
 
@@ -46,16 +50,13 @@ public class Enemy : MonoBehaviour
             {
                 anim.SetTrigger("attack");
                 cooldownTimer = 0;
-                // Tambah sistem serang player di sini (misal, kurangi HP player)
             }
         }
         else if (distance <= chaseRange)
         {
-            // Kejar player
             Vector2 direction = (player.position - transform.position).normalized;
             rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
 
-            // Flip arah musuh
             if (direction.x > 0.01f)
                 transform.localScale = new Vector3(1, 1, 1);
             else if (direction.x < -0.01f)
@@ -79,7 +80,6 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         anim.SetTrigger("hurt");
 
-        // Update health bar
         if (healthBar != null)
             healthBar.SetHealth(currentHealth, maxHealth);
 
@@ -98,36 +98,36 @@ public class Enemy : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
         GetComponent<Collider2D>().enabled = false;
-        this.enabled = false; // Nonaktifkan script
+        this.enabled = false;
         Destroy(gameObject, 1.5f);
 
         if (healthBar != null)
-            Destroy(healthBar.gameObject); // hilangkan bar
+            Destroy(healthBar.gameObject);
     }
 
-    // Opsional: dipanggil dari event animasi untuk memberi damage ke player
     public void DamagePlayer()
     {
-        player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+        if (playerHealth != null && !playerHealth.IsDead())
+        {
+            playerHealth.TakeDamage(attackDamage);
+        }
     }
 
     private IEnumerator Shake(float duration, float magnitude)
     {
         Vector3 originalPos = transform.localPosition;
-
         float elapsed = 0f;
 
         while (elapsed < duration)
-            {
-                float offsetX = Random.Range(-1f, 1f) * magnitude;
-                float offsetY = Random.Range(-1f, 1f) * magnitude;
+        {
+            float offsetX = Random.Range(-1f, 1f) * magnitude;
+            float offsetY = Random.Range(-1f, 1f) * magnitude;
 
-                transform.localPosition = originalPos + new Vector3(offsetX, offsetY, 0);
+            transform.localPosition = originalPos + new Vector3(offsetX, offsetY, 0);
+            elapsed += Time.deltaTime;
 
-                elapsed += Time.deltaTime;
-
-                yield return null;
-            }
+            yield return null;
+        }
 
         transform.localPosition = originalPos;
     }
@@ -136,5 +136,4 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }
