@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Respawn player
-        PlayerHealth player = FindObjectOfType<PlayerHealth>();
+        PlayerHealth player = FindFirstObjectByType<PlayerHealth>();
         if (player != null)
         {
             player.Respawn();
