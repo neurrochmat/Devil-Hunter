@@ -11,6 +11,11 @@ public class Enemy : MonoBehaviour
     public int attackDamage = 10;
     public float attackCooldown = 1.5f;
 
+    [Header("Patrol Area")]
+    public Transform pointA;
+    public Transform pointB;
+    private Transform patrolTarget;
+
     private int currentHealth;
     private EnemyHealthBar healthBar;
     private Transform player;
@@ -34,6 +39,9 @@ public class Enemy : MonoBehaviour
         healthBar = barObj.GetComponent<EnemyHealthBar>();
         healthBar.Initialize(transform);
         healthBar.SetHealth(currentHealth, maxHealth);
+
+        // Inisialisasi patrol target
+        patrolTarget = pointB;
     }
 
     private void Update()
@@ -42,9 +50,16 @@ public class Enemy : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (distance <= attackRange)
+        // Tentukan batas patroli
+        float minX = Mathf.Min(pointA.position.x, pointB.position.x);
+        float maxX = Mathf.Max(pointA.position.x, pointB.position.x);
+
+        bool playerInPatrolArea = player.position.x >= minX && player.position.x <= maxX;
+
+        if (distance <= attackRange && playerInPatrolArea)
         {
             rb.linearVelocity = Vector2.zero;
+            anim.SetBool("isRunning", false);
 
             if (cooldownTimer >= attackCooldown)
             {
@@ -52,25 +67,58 @@ public class Enemy : MonoBehaviour
                 cooldownTimer = 0;
             }
         }
-        else if (distance <= chaseRange)
+        else if (distance <= chaseRange && playerInPatrolArea)
         {
             Vector2 direction = (player.position - transform.position).normalized;
-            rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
 
-            if (direction.x > 0.01f)
-                transform.localScale = new Vector3(1, 1, 1);
-            else if (direction.x < -0.01f)
-                transform.localScale = new Vector3(-1, 1, 1);
+            bool isAtLeftBoundary = transform.position.x <= minX && direction.x < 0;
+            bool isAtRightBoundary = transform.position.x >= maxX && direction.x > 0;
 
-            anim.SetBool("isRunning", true);
+            if (isAtLeftBoundary || isAtRightBoundary)
+            {
+                // Jika musuh sudah di batas, kembali patroli
+                Patrol();
+            }
+            else
+            {
+                // Jika tidak di batas, lanjutkan mengejar player
+                rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
+
+                if (direction.x > 0.01f)
+                    transform.localScale = new Vector3(1, 1, 1);
+                else if (direction.x < -0.01f)
+                    transform.localScale = new Vector3(-1, 1, 1);
+
+                anim.SetBool("isRunning", true);
+            }
         }
         else
         {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            anim.SetBool("isRunning", false);
+            // Kembali patroli jika player di luar jangkauan atau di luar area
+            Patrol();
         }
 
         cooldownTimer += Time.deltaTime;
+    }
+
+    private void Patrol()
+    {
+        if (pointA == null || pointB == null) return;
+
+        Vector2 direction = (patrolTarget.position - transform.position).normalized;
+        rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
+
+        if (direction.x > 0.01f)
+            transform.localScale = new Vector3(1, 1, 1);
+        else if (direction.x < -0.01f)
+            transform.localScale = new Vector3(-1, 1, 1);
+
+        anim.SetBool("isRunning", true);
+
+        if (Vector2.Distance(transform.position, patrolTarget.position) < 0.2f)
+        {
+            patrolTarget = patrolTarget == pointA ? pointB : pointA;
+        }
     }
 
     public void TakeDamage(int damage)
@@ -136,4 +184,20 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-}
+    // ... (di bawah fungsi DestroyEnemy())
+
+    private void OnDrawGizmos()
+    {
+        if (pointA != null && pointB != null)
+        {
+            // Tentukan batas X
+            float minX = Mathf.Min(pointA.position.x, pointB.position.x);
+            float maxX = Mathf.Max(pointA.position.x, pointB.position.x);
+
+            // Gambar garis batas di Scene View
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(new Vector3(minX, transform.position.y - 5, 0), new Vector3(minX, transform.position.y + 5, 0));
+            Gizmos.DrawLine(new Vector3(maxX, transform.position.y - 5, 0), new Vector3(maxX, transform.position.y + 5, 0));
+        }
+    }
+} // Pastikan ini kurung kurawal penutup terakhir untuk class

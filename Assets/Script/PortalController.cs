@@ -7,30 +7,37 @@ public class PortalController : MonoBehaviour
     private Animator animator;
     private bool isPortalActive = false;
 
+    [Header("Sound")]
+    public AudioClip portalOpenSound; // Drag AudioClip di Inspector
+    private AudioSource audioSource;
+
     private void Awake()
     {
-        // Inisialisasi animator di Awake agar tetap terbaca walau object awalnya nonaktif
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
-        if (animator == null)
-        {
-            Debug.LogError("Animator tidak ditemukan pada GameObject Portal!");
-        }
+        if (animator == null) Debug.LogError("Animator tidak ditemukan!");
+        if (audioSource == null) Debug.LogError("AudioSource tidak ditemukan!");
     }
 
     private void Start()
     {
-        gameObject.SetActive(false); // Sembunyikan portal di awal permainan
+        gameObject.SetActive(false); // Sembunyikan portal di awal
     }
 
     public void ActivatePortal()
     {
-        gameObject.SetActive(true);  // Aktifkan portal
+        gameObject.SetActive(true);
         isPortalActive = true;
 
         if (animator != null)
         {
-            animator.SetTrigger("OpenPortal"); // Mainkan animasi portal muncul
+            animator.SetTrigger("OpenPortal");
+        }
+
+        if (audioSource != null && portalOpenSound != null)
+        {
+            audioSource.PlayOneShot(portalOpenSound); // Mainkan suara portal
         }
     }
 
@@ -38,7 +45,7 @@ public class PortalController : MonoBehaviour
     {
         if (isPortalActive && other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nextSceneName); // Pindah ke scene berikutnya
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 }
