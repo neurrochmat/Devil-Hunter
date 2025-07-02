@@ -56,30 +56,24 @@ public class PlayerHealth : MonoBehaviour
 
         anim.SetTrigger("isDead");
 
-        // Disable movement
         if (movement != null) movement.enabled = false;
-
-        // Tetap aktifkan collider untuk jatuh di tanah
         if (col != null) col.enabled = true;
 
-        // Aktifkan physics agar jatuh ke tanah
         if (rb != null)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.linearVelocity = Vector2.zero;
         }
 
-        // Ubah layer agar tidak diserang musuh
-        gameObject.layer = LayerMask.NameToLayer("DeadPlayer"); // Buat layer baru di Project Settings
+        gameObject.layer = LayerMask.NameToLayer("DeadPlayer");
 
-        // Tampilkan Game Over panel dengan delay
         StartCoroutine(ShowGameOverDelayed(1.2f));
     }
 
     private System.Collections.IEnumerator ShowGameOverDelayed(float delay)
     {
         yield return new WaitForSeconds(delay);
-        GameManager.instance.ShowGameOver(); // GameOver muncul fade-in di GameManager
+        GameManager.instance.ShowGameOver();
     }
 
     public void Respawn()
@@ -90,23 +84,17 @@ public class PlayerHealth : MonoBehaviour
         isDead = false;
         healthBar.SetHealth(currentHealth, maxHealth);
 
-        // Aktifkan ulang movement
         if (movement != null) movement.enabled = true;
-
-        // Aktifkan collider
         if (col != null) col.enabled = true;
 
-        // Aktifkan physics kembali
         if (rb != null)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.linearVelocity = Vector2.zero;
         }
 
-        // Kembalikan layer ke default
         gameObject.layer = defaultLayer;
 
-        // Reset animasi
         anim.Rebind();
         anim.Update(0f);
     }
@@ -114,5 +102,19 @@ public class PlayerHealth : MonoBehaviour
     public bool IsDead()
     {
         return isDead;
+    }
+
+    public void HealToFull()
+    {
+        if (isDead) return;
+
+        currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth, maxHealth);
+        Debug.Log("Player healed to full health");
+    }
+
+    public bool NeedsHealing()
+    {
+        return currentHealth < maxHealth;
     }
 }
