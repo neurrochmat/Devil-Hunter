@@ -8,7 +8,6 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
-[Uu]ser[Ss]ettings/
 
 # =============== #
 # Asset Store     #
@@ -73,50 +72,3 @@ Assets/**/*.cginc
 # Unity PlasticSCM #
 # =============== #
 .plastic/
-
-# =============== #
-# Crash Reports & Memory #
-# =============== #
-/[Cc]rash[Rr]eports/
-/[Mm]emory[Cc]aptures/
-/[Rr]ecordings/
-*.symbols.zip
-
-# =============== #
-# Unity Generated Files #
-# =============== #
-*.PerformanceData
-*.pidb.meta
-*.pdb.meta
-*.mdb.meta
-sysinfo.txt
-*.apk
-*.aab
-*.unitypackage
-*.app
-
-# =============== #
-# Android specific #
-# =============== #
-/[Aa]ndroid/
-*.aab
-*.apk
-*.aar
-*.unitypackage.meta
-
-# =============== #
-# iOS specific #
-# =============== #
-/[Ii][Oo][Ss]/
-/[Ii][Pp][Aa]/
-
-# =============== #
-# WebGL specific #
-# =============== #
-/[Ww]eb[Gg][Ll]/
-
-# =============== #
-# Code Coverage #
-# =============== #
-/[Cc]ode[Cc]overage/
-*.dotCover
