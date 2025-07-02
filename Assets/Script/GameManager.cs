@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // Singleton
 
     public GameObject gameOverPanel; // Assign via Inspector
+    public string sceneToReload; // Nama scene yang akan di-reload (set di Inspector)
+
     private CanvasGroup canvasGroup;
 
     private void Awake()
@@ -64,24 +67,13 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        // Sembunyikan panel Game Over dan reset fade
-        if (canvasGroup != null)
+        if (!string.IsNullOrEmpty(sceneToReload))
         {
-            canvasGroup.alpha = 0;
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
+            SceneManager.LoadScene(sceneToReload); // Reload scene yang dipilih
         }
-
-        if (gameOverPanel != null)
+        else
         {
-            gameOverPanel.SetActive(false);
-        }
-
-        // Respawn player
-        PlayerHealth player = FindFirstObjectByType<PlayerHealth>();
-        if (player != null)
-        {
-            player.Respawn();
+            Debug.LogWarning("Scene untuk respawn belum diset di GameManager.");
         }
     }
 }
