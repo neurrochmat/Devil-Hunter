@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\kuliah\\semester 4\\game\\tubes\\devil-hunter\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\kuliah\\semester 4\\game\\tubes\\devil-hunter\\assets\\script\\trapdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\trapdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\kuliah\\semester 4\\game\\tubes\\devil-hunter\\assets\\script\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,6 +27,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TrapDamage.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\TrapDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\TrapDamage.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\TrapDamage.cs",
+              "RelativeToolTip": "Assets\\Script\\TrapDamage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T18:26:23.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T17:18:33.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
@@ -26,8 +60,7 @@
               "RelativeToolTip": "Assets\\Script\\GameManager.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAIwFAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T11:38:20.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T11:38:20.716Z"
             }
           ]
         }
