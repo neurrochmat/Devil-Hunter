@@ -91,7 +91,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         isDead = true;
         anim.SetTrigger("dead");
