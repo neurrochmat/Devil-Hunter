@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; // <- Tambahkan ini untuk menggunakan IEnumerator
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
     private PlayerMovement movement;
+    private PlayerAudio playerAudio;
+    private SpriteRenderer spriteRenderer;
 
     private int defaultLayer;
 
@@ -25,6 +28,8 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         movement = GetComponent<PlayerMovement>();
+        playerAudio = GetComponent<PlayerAudio>();
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Inisialisasi SpriteRenderer
 
         defaultLayer = gameObject.layer;
 
@@ -38,12 +43,25 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
         healthBar.SetHealth(currentHealth, maxHealth);
+        playerAudio?.PlayDamage();
+
+        StartCoroutine(FlashRed()); // <- Tambahkan efek flash merah
 
         Debug.Log("Player took damage, current HP: " + currentHealth);
 
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    private IEnumerator FlashRed()
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.2f);
+            spriteRenderer.color = Color.white;
         }
     }
 
@@ -64,13 +82,21 @@ public class PlayerHealth : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.linearVelocity = Vector2.zero;
         }
+        var playerAttack = GetComponent<PlayerAttack>();
+        if (playerAttack != null)
+        {
+            playerAttack.enabled = false;
+        }
+
 
         gameObject.layer = LayerMask.NameToLayer("DeadPlayer");
 
         StartCoroutine(ShowGameOverDelayed(1.2f));
+        playerAudio?.PlayDeath();
+        
     }
 
-    private System.Collections.IEnumerator ShowGameOverDelayed(float delay)
+    private IEnumerator ShowGameOverDelayed(float delay)
     {
         yield return new WaitForSeconds(delay);
         GameManager.instance.ShowGameOver();
@@ -94,6 +120,12 @@ public class PlayerHealth : MonoBehaviour
         }
 
         gameObject.layer = defaultLayer;
+        var playerAttack = GetComponent<PlayerAttack>();
+        if (playerAttack != null)
+        {
+            playerAttack.enabled = true;
+        }
+
 
         anim.Rebind();
         anim.Update(0f);
