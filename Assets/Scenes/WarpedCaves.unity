@@ -327,6 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1785592364}
+  sceneToReload: WarpedCaves
 --- !u!4 &35654290
 Transform:
   m_ObjectHideFlags: 0
