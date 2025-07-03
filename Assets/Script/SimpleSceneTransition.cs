@@ -99,7 +99,7 @@ public class SimpleSceneTransition : MonoBehaviour
         if (Instance != null) return;
         
         // Cek apakah prefab sudah ada di scene
-        SimpleSceneTransition existing = FindObjectOfType<SimpleSceneTransition>();
+        SimpleSceneTransition existing = FindAnyObjectByType<SimpleSceneTransition>();
         if (existing != null)
         {
             Instance = existing;
@@ -138,6 +138,11 @@ public class SimpleSceneTransition : MonoBehaviour
         
         // Tambahkan script
         SimpleSceneTransition transition = transitionObj.AddComponent<SimpleSceneTransition>();
+        // Tetapkan instance
+        Instance = transition;
+        
+        // Pastikan tidak dihancurkan saat pindah scene
+        DontDestroyOnLoad(transitionObj);
         
         Debug.Log("SimpleSceneTransition dibuat secara otomatis");
     }
