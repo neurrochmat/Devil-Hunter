@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PortalController : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class PortalController : MonoBehaviour
     private void Start()
     {
         gameObject.SetActive(false); // Sembunyikan portal di awal
+
+        // Pastikan SimpleSceneTransition tersedia ketika portal diaktifkan
+        SimpleSceneTransition.CreateIfNotExists();
     }
 
     public void ActivatePortal()
@@ -45,14 +49,19 @@ public class PortalController : MonoBehaviour
     {
         if (isPortalActive && other.CompareTag("Player"))
         {
-            // Cek apakah SceneTransitionManager tersedia
-            if (SceneTransitionManager.Instance != null)
+            // Gunakan SimpleSceneTransition terlebih dahulu jika tersedia
+            if (SimpleSceneTransition.Instance != null)
+            {
+                SimpleSceneTransition.Instance.LoadScene(nextSceneName);
+            }
+            // Fallback ke SceneTransitionManager jika SimpleSceneTransition tidak ada
+            else if (SceneTransitionManager.Instance != null)
             {
                 SceneTransitionManager.Instance.LoadScene(nextSceneName);
             }
+            // Fallback jika tidak ada transition manager
             else
             {
-                // Fallback jika tidak ada SceneTransitionManager
                 SceneManager.LoadScene(nextSceneName);
             }
         }
