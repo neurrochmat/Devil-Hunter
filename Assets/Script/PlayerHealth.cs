@@ -135,4 +135,18 @@ public class PlayerHealth : MonoBehaviour
     {
         return isDead;
     }
+
+    public void HealToFull()
+    {
+        if (isDead) return;
+
+        currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth, maxHealth);
+        Debug.Log("Player healed to full health");
+    }
+
+    public bool NeedsHealing()
+    {
+        return currentHealth < maxHealth;
+    }
 }
