@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: Attack 3
   attackAnimation: {fileID: 7400000, guid: 0ac23490edf8ab647b5eea1e655ed6cc, type: 2}
-  attackRange: 1.5
-  damage: 5
+  attackRange: 2
+  damage: 7
