@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Fungsi ini akan dipanggil oleh tombol "Play"
     public void PlayGame()
     {
-        SceneManager.LoadScene("NamaSceneGameAnda"); // Ganti sesuai scene game kamu
+        SceneManager.LoadScene("WarpedCaves"); // Ganti sesuai scene game kamu
         Debug.Log("Memulai permainan...");
     }
 
