@@ -14,14 +14,17 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
-
     private bool canDoubleJump;
+    private PlayerAudio playerAudio;
+
+    private bool wasRunning = false;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        playerAudio = GetComponent<PlayerAudio>();
     }
 
     private void Update()
@@ -38,6 +41,17 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", isGrounded());
 
+        // Play run sound only when grounded and running
+        // Play or stop run sound only when grounded and moving
+        if (horizontalInput != 0 && isGrounded())
+        {
+            playerAudio?.PlayRun();
+        }
+        else
+        {
+            playerAudio?.StopRun();
+        }
+
         // Wall jump logic
         if (wallJumpCooldown > 0.2f)
         {
@@ -49,7 +63,9 @@ public class PlayerMovement : MonoBehaviour
                 body.linearVelocity = Vector2.zero;
             }
             else
+            {
                 body.gravityScale = 7;
+            }
 
             if (Input.GetKeyDown(KeyCode.Space))
                 Jump();
@@ -80,13 +96,15 @@ public class PlayerMovement : MonoBehaviour
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
             anim.SetTrigger("jump");
-            canDoubleJump = true; // Reset double jump
+            playerAudio?.PlayJump();
+            canDoubleJump = true;
         }
         else if (canDoubleJump)
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
             anim.SetTrigger("jump");
-            canDoubleJump = false; // Sudah pakai double jump
+            playerAudio?.PlayJump();
+            canDoubleJump = false;
         }
         else if (onWall() && !isGrounded())
         {
@@ -100,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
                 body.linearVelocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 6);
             }
 
+            playerAudio?.PlayJump();
             wallJumpCooldown = 0;
         }
     }

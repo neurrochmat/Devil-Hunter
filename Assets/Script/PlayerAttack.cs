@@ -11,11 +11,15 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
     private int currentAttackIndex = 0;
+    private PlayerAudio playerAudio;
+
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+        playerAudio = GetComponent<PlayerAudio>();
+
     }
 
     private void Update()
@@ -30,6 +34,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
+        playerAudio?.PlayAttack();
+
         var currentAttack = attackTypes[currentAttackIndex];
         anim.Play(currentAttack.attackAnimation.name);
         cooldownTimer = 0;
