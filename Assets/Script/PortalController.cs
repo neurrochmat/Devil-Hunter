@@ -45,7 +45,16 @@ public class PortalController : MonoBehaviour
     {
         if (isPortalActive && other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nextSceneName);
+            // Cek apakah SceneTransitionManager tersedia
+            if (SceneTransitionManager.Instance != null)
+            {
+                SceneTransitionManager.Instance.LoadScene(nextSceneName);
+            }
+            else
+            {
+                // Fallback jika tidak ada SceneTransitionManager
+                SceneManager.LoadScene(nextSceneName);
+            }
         }
     }
 }
