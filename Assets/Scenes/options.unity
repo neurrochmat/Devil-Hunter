@@ -395,6 +395,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535698256}
   m_CullTransparentMesh: 1
+--- !u!1 &680109083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680109085}
+  - component: {fileID: 680109084}
+  m_Layer: 0
+  m_Name: EscapeHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &680109084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680109083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c67a69666d000f54b966549229e041f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuSceneName: MainMenu
+--- !u!4 &680109085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680109083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 114.6687, y: 22.704662, z: 0.07781733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701448586
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,8 +553,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -9.102783, y: -1.6776009}
-  m_SizeDelta: {x: 96.6053, y: 27.5621}
+  m_AnchoredPosition: {x: 0.55358887, y: -1.6776028}
+  m_SizeDelta: {x: 77.2926, y: 27.5621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898604362
 MonoBehaviour:
@@ -661,8 +706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 265.41, y: -25.246}
-  m_SizeDelta: {x: 830.59, y: 50.491}
+  m_AnchoredPosition: {x: -41.518982, y: -2.0001745}
+  m_SizeDelta: {x: -249.5869, y: 20.5141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1025276953
 GameObject:
@@ -700,8 +745,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1645.1838, y: 874.9828}
-  m_SizeDelta: {x: 228.4043, y: 160.7935}
+  m_AnchoredPosition: {x: -812.9913, y: 424.8897}
+  m_SizeDelta: {x: 140.4218, y: 91.0141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025276955
 MonoBehaviour:
@@ -1157,8 +1202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 265.41, y: -25.246}
-  m_SizeDelta: {x: 830.59, y: 24.996}
+  m_AnchoredPosition: {x: -41.518982, y: -2.0001755}
+  m_SizeDelta: {x: -249.5869, y: -4.9811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1728851962
 GameObject:
@@ -1194,8 +1239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1424, y: -60}
-  m_SizeDelta: {x: 729.663, y: 264.8681}
+  m_AnchoredPosition: {x: -766, y: -71}
+  m_SizeDelta: {x: 618.106, y: 253.1253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1728851964
 MonoBehaviour:
@@ -1219,7 +1264,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 150
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1364,8 +1409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 265.41235, y: -25.24559}
-  m_SizeDelta: {x: 830.5875, y: 50.4912}
+  m_AnchoredPosition: {x: -41.5177, y: -2}
+  m_SizeDelta: {x: -249.5881, y: 20.5143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914218282
 MonoBehaviour:
@@ -1412,3 +1457,4 @@ SceneRoots:
   - {fileID: 1429211084}
   - {fileID: 479310096}
   - {fileID: 984343983}
+  - {fileID: 680109085}

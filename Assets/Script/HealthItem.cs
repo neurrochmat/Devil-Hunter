@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class HealthItem : MonoBehaviour
 {
-    public AudioClip pickupSound; // Opsional
-    public GameObject pickupEffect; // Opsional
+    public AudioClip pickupSound;
+    public GameObject pickupEffect;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

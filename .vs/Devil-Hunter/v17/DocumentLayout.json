@@ -1,72 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Devil-Hunter\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\devil-hunter\\assets\\script\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\devil-hunter\\assets\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
-  "DocumentGroupContainers": [
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OptionsMenu.cs",
-              "DocumentMoniker": "D:\\Devil-Hunter\\Assets\\Script\\OptionsMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\OptionsMenu.cs",
-              "ToolTip": "D:\\Devil-Hunter\\Assets\\Script\\OptionsMenu.cs",
-              "RelativeToolTip": "Assets\\Script\\OptionsMenu.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAYwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T19:23:27.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\Devil-Hunter\\Assets\\Script\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\MainMenu.cs",
-              "ToolTip": "D:\\Devil-Hunter\\Assets\\Script\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Script\\MainMenu.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T15:21:31.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-{
-  "Version": 1,
   "WorkspaceRootPath": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\kuliah\\semester 4\\game\\tubes\\devil-hunter\\assets\\script\\bossenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bossenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\kuliah\\semester 4\\game\\tubes\\devil-hunter\\assets\\script\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|d:\\kuliah\\semester 4\\game\\tubes\\devil-hunter\\assets\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\MusicTriggerArea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\MusicTriggerArea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\escapetomenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\escapetomenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\healthitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\healthitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\playeraudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,16 +39,20 @@
       "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\trapdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\healthitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\healthitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\AutoDestroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\AutoDestroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2842A72-B505-4D9B-D0EE-68CD9D6AA067}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\MusicManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\MusicManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\assets\\script\\boss3enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\script\\boss3enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -96,11 +62,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerMovement.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T09:08:59.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MusicManager.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\MusicManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\MusicManager.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\MusicManager.cs",
+              "RelativeToolTip": "Assets\\Script\\MusicManager.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T08:49:11.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BossEnemy.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\BossEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BossEnemy.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\BossEnemy.cs",
+              "RelativeToolTip": "Assets\\Script\\BossEnemy.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAcwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T08:39:41.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EscapeToMenu.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\EscapeToMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\EscapeToMenu.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\EscapeToMenu.cs",
+              "RelativeToolTip": "Assets\\Script\\EscapeToMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T08:13:56.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PlayerAudio.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\PlayerAudio.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerAudio.cs",
@@ -112,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "AutoDestroy.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\AutoDestroy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\AutoDestroy.cs",
@@ -124,25 +140,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "HealthItem.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\HealthItem.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\HealthItem.cs",
               "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\HealthItem.cs",
               "RelativeToolTip": "Assets\\Script\\HealthItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T22:51:44.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerHealth.cs",
               "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\PlayerHealth.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerHealth.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAQwJQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwJEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T22:48:43.254Z",
               "EditorCaption": ""
@@ -150,6 +166,17 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "MusicTriggerArea.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\MusicTriggerArea.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\MusicTriggerArea.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\MusicTriggerArea.cs",
+              "RelativeToolTip": "Assets\\Script\\MusicTriggerArea.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T08:51:13.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "TrapDamage.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\TrapDamage.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TrapDamage.cs",
@@ -161,20 +188,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Enemy.cs",
               "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\Enemy.cs",
               "RelativeToolTip": "Assets\\Script\\Enemy.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAUwGEAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAMBAAAAAAAAAAAYwB0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:18:33.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T17:18:33.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
+              "Title": "Boss3Enemy.cs",
+              "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\Boss3Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Boss3Enemy.cs",
+              "ToolTip": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\Boss3Enemy.cs",
+              "RelativeToolTip": "Assets\\Script\\Boss3Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T06:46:43.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\KULIAH\\SEMESTER 4\\Game\\tubes\\Devil-Hunter\\Assets\\Script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",

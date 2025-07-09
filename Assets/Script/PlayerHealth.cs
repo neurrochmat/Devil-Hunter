@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections; // <- Tambahkan ini untuk menggunakan IEnumerator
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         col = GetComponent<Collider2D>();
         movement = GetComponent<PlayerMovement>();
         playerAudio = GetComponent<PlayerAudio>();
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Inisialisasi SpriteRenderer
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         defaultLayer = gameObject.layer;
 
@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth, maxHealth);
         playerAudio?.PlayDamage();
 
-        StartCoroutine(FlashRed()); // <- Tambahkan efek flash merah
+        StartCoroutine(FlashRed());
 
         Debug.Log("Player took damage, current HP: " + currentHealth);
 
@@ -82,18 +82,14 @@ public class PlayerHealth : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.linearVelocity = Vector2.zero;
         }
-        var playerAttack = GetComponent<PlayerAttack>();
-        if (playerAttack != null)
-        {
-            playerAttack.enabled = false;
-        }
 
+        var playerAttack = GetComponent<PlayerAttack>();
+        if (playerAttack != null) playerAttack.enabled = false;
 
         gameObject.layer = LayerMask.NameToLayer("DeadPlayer");
 
         StartCoroutine(ShowGameOverDelayed(1.2f));
         playerAudio?.PlayDeath();
-        
     }
 
     private IEnumerator ShowGameOverDelayed(float delay)
@@ -119,13 +115,10 @@ public class PlayerHealth : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
         }
 
-        gameObject.layer = defaultLayer;
         var playerAttack = GetComponent<PlayerAttack>();
-        if (playerAttack != null)
-        {
-            playerAttack.enabled = true;
-        }
+        if (playerAttack != null) playerAttack.enabled = true;
 
+        gameObject.layer = defaultLayer;
 
         anim.Rebind();
         anim.Update(0f);
