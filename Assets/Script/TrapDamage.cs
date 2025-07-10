@@ -26,7 +26,9 @@ public class TrapDamage : MonoBehaviour
             if (applyInitialDamage && playerHealth != null)
             {
                 playerHealth.TakeDamage(initialDamage);
+#if UNITY_EDITOR
                 Debug.Log("Player entered trap! Initial damage: " + initialDamage);
+#endif
             }
         }
     }
